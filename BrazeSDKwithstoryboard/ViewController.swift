@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func customcolor(_ sender: Any) {
-        AppDelegate.braze?.user.setCustomAttribute(key: "color", value: "\(String(describing: color.text))")
+        AppDelegate.braze?.user.setCustomAttribute(key: "color", value: "\(color.text ?? "no-id"))")
     }
     
     
