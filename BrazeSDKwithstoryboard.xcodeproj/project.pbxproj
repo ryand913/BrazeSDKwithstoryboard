@@ -13,6 +13,11 @@
 		5C7B88D22B4F42B10060D814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7B88D02B4F42B10060D814 /* Main.storyboard */; };
 		5C7B88D42B4F42B40060D814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7B88D32B4F42B40060D814 /* Assets.xcassets */; };
 		5C7B88D72B4F42B40060D814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7B88D52B4F42B40060D814 /* LaunchScreen.storyboard */; };
+		5C7B88E02B4F431B0060D814 /* BrazeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7B88DF2B4F431B0060D814 /* BrazeKit */; };
+		5C7B88E22B4F431B0060D814 /* BrazeKitCompat in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7B88E12B4F431B0060D814 /* BrazeKitCompat */; };
+		5C7B88E42B4F431B0060D814 /* BrazeLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7B88E32B4F431B0060D814 /* BrazeLocation */; };
+		5C7B88E62B4F431B0060D814 /* BrazeNotificationService in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7B88E52B4F431B0060D814 /* BrazeNotificationService */; };
+		5C7B88E82B4F431B0060D814 /* BrazePushStory in Frameworks */ = {isa = PBXBuildFile; productRef = 5C7B88E72B4F431B0060D814 /* BrazePushStory */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7B88E62B4F431B0060D814 /* BrazeNotificationService in Frameworks */,
+				5C7B88E22B4F431B0060D814 /* BrazeKitCompat in Frameworks */,
+				5C7B88E82B4F431B0060D814 /* BrazePushStory in Frameworks */,
+				5C7B88E02B4F431B0060D814 /* BrazeKit in Frameworks */,
+				5C7B88E42B4F431B0060D814 /* BrazeLocation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,13 @@
 			dependencies = (
 			);
 			name = BrazeSDKwithstoryboard;
+			packageProductDependencies = (
+				5C7B88DF2B4F431B0060D814 /* BrazeKit */,
+				5C7B88E12B4F431B0060D814 /* BrazeKitCompat */,
+				5C7B88E32B4F431B0060D814 /* BrazeLocation */,
+				5C7B88E52B4F431B0060D814 /* BrazeNotificationService */,
+				5C7B88E72B4F431B0060D814 /* BrazePushStory */,
+			);
 			productName = BrazeSDKwithstoryboard;
 			productReference = 5C7B88C72B4F42B10060D814 /* BrazeSDKwithstoryboard.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 5C7B88BE2B4F42B10060D814;
+			packageReferences = (
+				5C7B88DE2B4F431B0060D814 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */,
+			);
 			productRefGroup = 5C7B88C82B4F42B10060D814 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +381,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C7B88DE2B4F431B0060D814 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/braze-inc/braze-swift-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C7B88DF2B4F431B0060D814 /* BrazeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7B88DE2B4F431B0060D814 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeKit;
+		};
+		5C7B88E12B4F431B0060D814 /* BrazeKitCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7B88DE2B4F431B0060D814 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeKitCompat;
+		};
+		5C7B88E32B4F431B0060D814 /* BrazeLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7B88DE2B4F431B0060D814 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeLocation;
+		};
+		5C7B88E52B4F431B0060D814 /* BrazeNotificationService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7B88DE2B4F431B0060D814 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeNotificationService;
+		};
+		5C7B88E72B4F431B0060D814 /* BrazePushStory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C7B88DE2B4F431B0060D814 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazePushStory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C7B88BF2B4F42B10060D814 /* Project object */;
 }

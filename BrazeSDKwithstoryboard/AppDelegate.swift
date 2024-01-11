@@ -6,14 +6,22 @@
 //
 
 import UIKit
+import BrazeKit
+import BrazeKitCompat
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    static var braze: Braze? = nil
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let configuration = Braze.Configuration(
+              apiKey: "a204919a-1a75-4502-af3c-4e786881e67b",
+              endpoint: "sondheim.braze.com"
+        )
+        let braze = Braze(configuration: configuration)
+        configuration.logger.level = .debug
+        AppDelegate.braze = braze
         return true
     }
 
